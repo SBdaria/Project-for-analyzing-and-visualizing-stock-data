@@ -31,8 +31,6 @@ def calculate_and_display_average_price(data):
     :param data: DataFrame with data
     """
     print('Средняя цена закрытия акций за заданный период:', data['Close'].mean())
-    pd.set_option('display.width', None)
-    print(data)
 
 
 def notify_if_strong_fluctuations(data, threshold):
