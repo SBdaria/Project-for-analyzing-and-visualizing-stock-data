@@ -30,6 +30,11 @@
 <img width="1430" alt="image" src="https://github.com/user-attachments/assets/8c99b6d5-8ef3-428b-8528-e35d0785b531" />
 <img width="923" alt="image" src="https://github.com/user-attachments/assets/aaf20bf4-d3c1-4491-9f0a-616044d5048b" />
 
+Есть возможность получить уведомление в консоли, если колебания цен акций вышли за границы заданного пользователем диапазона.
+
+<img width="534" alt="image" src="https://github.com/user-attachments/assets/bff30811-7d44-4f95-b356-b1dd37511e60" />
+
+
 
 Пошаговое использование
 -----------------------------------
