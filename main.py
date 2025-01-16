@@ -22,6 +22,9 @@ def main():
     # Average closing price of shares
     dd.calculate_and_display_average_price(stock_data)
 
+    # Calculating stock price fluctuations
+    dd.notify_if_strong_fluctuations(stock_data, int(input("Введите максимальную величину колебания цены акций: ")))
+
 
 if __name__ == "__main__":
     main()

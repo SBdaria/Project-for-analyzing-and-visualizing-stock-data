@@ -3,6 +3,13 @@ import pandas as pd
 
 
 def create_and_save_plot(data, ticker, period, filename=None):
+    """
+    Creates a chart showing closing prices and average price movements. Provides the ability to save graphics to a file.
+    :param data: DataFrame with data about stock data
+    :param ticker: stock ticker
+    :param period: time period
+    :param filename: file name with graph
+    """
     plt.figure(figsize=(10, 6))
 
     if 'Date' not in data:
