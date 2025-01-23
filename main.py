@@ -25,6 +25,9 @@ def main():
     # Calculating stock price fluctuations
     dd.notify_if_strong_fluctuations(stock_data, int(input("Введите максимальную величину колебания цены акций: ")))
 
+    # Saving to a CSV file
+    dd.export_data_to_csv(stock_data, f"information_about_stock_price_{ticker}_for_{period}.csv")
+
 
 if __name__ == "__main__":
     main()

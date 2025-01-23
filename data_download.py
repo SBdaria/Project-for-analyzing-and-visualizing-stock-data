@@ -31,6 +31,8 @@ def calculate_and_display_average_price(data):
     :param data: DataFrame with data
     """
     print('Средняя цена закрытия акций за заданный период:', data['Close'].mean())
+    #pd.set_option('display.width', None)
+    #print(data)
 
 
 def notify_if_strong_fluctuations(data, threshold):
@@ -41,3 +43,14 @@ def notify_if_strong_fluctuations(data, threshold):
     """
     if data['Close'].max() - data['Close'].min() > threshold:
         print(f'Колебания цены закрытия акций за период более {threshold}.')
+
+
+def export_data_to_csv(data, filename):
+    """
+    Saving downloaded stock data to a CSV file.
+    :param data: DataFrame with data
+    :param filename: file name with information
+    """
+    data.to_csv(filename)
+    print(f"Файл с информацией об акциях сохранен как {filename}")
+
