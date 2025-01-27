@@ -23,10 +23,14 @@ def main():
     dd.calculate_and_display_average_price(stock_data)
 
     # Calculating stock price fluctuations
-    dd.notify_if_strong_fluctuations(stock_data, int(input("Введите максимальную величину колебания цены акций: ")))
+    #dd.notify_if_strong_fluctuations(stock_data, int(input("Введите максимальную величину колебания цены акций: ")))
 
     # Saving to a CSV file
-    dd.export_data_to_csv(stock_data, f"information_about_stock_price_{ticker}_for_{period}.csv")
+    #dd.export_data_to_csv(stock_data, f"information_about_stock_price_{ticker}_for_{period}.csv")
+
+    # Calculation of indicators RSI and MACD
+    print(f"RSI за данный период = {dd.rsi(stock_data)}")
+    print(f"MACD за данный период = {dd.macd(ticker)}")
 
 
 if __name__ == "__main__":
