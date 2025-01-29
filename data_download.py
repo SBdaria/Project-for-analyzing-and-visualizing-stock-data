@@ -3,15 +3,20 @@ import pandas as pd
 import yfinance as yf
 
 
-def fetch_stock_data(ticker, period='1mo'):
+def fetch_stock_data(ticker, period='', start='', end=''):
     """
     Retrieves historical stock data for a specified ticker and time period. Returns a DataFrame with data.
     :param ticker: stock ticker
     :param period: time period
+    :param start: start date of period
+    :param end: end date of period
     :return: DataFrame with data
     """
     stock = yf.Ticker(ticker)
-    data = stock.history(period=period)
+    if period:
+        data = stock.history(period=period)
+    else:
+        data = stock.history(start=start, end=end)
     return data
 
 
